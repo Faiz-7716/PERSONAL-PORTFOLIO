@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const roles = ["Full Stack Web Developer", "Data Scientist", "Computer Science Student", "Freelancer", "AI Generalist"];
+    const roles = ["Full Stack Web Dev", "Data Scientist", "CS Student", "Freelancer", "AI Generalist"];
     const roleElement = document.getElementById("role");
     let roleIndex = 0;
     let letterIndex = 0;
@@ -149,7 +149,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Animate skill bars on scroll into view
+    function animateSkillBars() {
+        document.querySelectorAll('.skill-box').forEach(box => {
+            const bar = box.querySelector('.skill-box-bar span');
+            const targetWidth = bar.getAttribute('data-width');
+            const boxRect = box.getBoundingClientRect();
+            const inView = boxRect.top < window.innerHeight && boxRect.bottom > 0;
+            if (inView && !bar.classList.contains('fill')) {
+                bar.classList.add('fill');
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 100); // slight delay for smoothness
+            }
+        });
+    }
 
+    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener('resize', animateSkillBars);
+    animateSkillBars(); // Run on load
+});
 
 
 

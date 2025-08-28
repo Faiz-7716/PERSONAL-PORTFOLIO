@@ -60,3 +60,64 @@ This project showcases my skills, projects, education, work experience, and cont
 ## 📜 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+
+
+/* ======= Professional Font Styling ======= */
+
+/* Headings and Section Titles */
+h1, h2, h3, h4, h5, h6,
+.section-heading h3,
+.plan-name,
+.edu-work-label,
+.service-box-heading-text strong,
+.project-box-text strong {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Section Subtitles and Labels */
+.section-heading span,
+.edu-work-label,
+.plan-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Body Text and Paragraphs */
+body, p, .service-box-details, .plan-features li span, .project-box-text span, .contact-box span, .testimonial-box p, .edu-work-box p {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.1px;
+}
+
+/* Navigation and Buttons */
+header ul li a,
+.dark-light-btn,
+.faiz-profile-content a,
+.service-box a,
+.plan-box a {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Project Filter List */
+.project-list li {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Numbers and Stats */
+.project-container-box span {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}

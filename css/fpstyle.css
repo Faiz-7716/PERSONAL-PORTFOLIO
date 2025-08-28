@@ -1,4 +1,19 @@
 /* -------------------------------General Styles-------------------------------- */
+
+html::-webkit-scrollbar {
+    width: 10px;
+    background: #f0f0f0; 
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--bg-color);  
+    border-radius: 8px;
+    border: 2px solid #f0f0f0;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-color);  }
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +21,10 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
+html::-webkit-scrollbar-track-piece{
+    color: var(--main-color);
+    background: var(--main-color);
+}
 a {
     text-decoration: none;
 }
@@ -198,10 +216,12 @@ header ul li a.active,
 }
 
 .myfaiz-profile-image {
-    width: 100%;
-    height: 280px;
+      width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px var(--main-color);
     display: flex;
-    border-radius: 30px 0px 30px 30px;
+    /* border-radius: 30px 0px 30px 30px; */
     background-color: var(--text-color);
     overflow: hidden;
 }
@@ -386,7 +406,7 @@ header ul li a.active,
 #about-us p {
     color: var(--text-color);
     font-size: .9rem;
-    line-height: 1.6;
+    line-height: 1.5rem;
     max-width: 750px;
     margin-top: 10px;
 }
@@ -999,6 +1019,7 @@ header ul li a.active,
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
 .contact-box-icon{
     display: flex;
@@ -1020,7 +1041,7 @@ header ul li a.active,
 .contact-box span{
     color: var(--text-color);
     font-size: 0.9rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .contact-box-location{
     grid-column: 1/3;
@@ -1041,55 +1062,17 @@ header ul li a.active,
     object-position: center;
 }
 
-/* Headings and Section Titles */
-h1, h2, h3, h4, h5, h6,
-.section-heading h3,
-.plan-name,
-.edu-work-label,
-.service-box-heading-text strong,
-.project-box-text strong {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+.skill-box-bar span {
+    background-color: #fff;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    width: 0%; /* Start at 0% */
+    transition: width 2s cubic-bezier(0.4,0,0.2,1), background-color 0.5s;
 }
 
-/* Name/Signature (Profile Section) */
-.profile-text h1 {
-    font-family: 'Great Vibes', 'Forum', cursive;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-/* Section Subtitles and Labels */
-.section-heading span,
-.edu-work-label,
-.plan-name {
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Project Box Titles */
-.project-box-text strong {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-/* For a little extra elegance on numbers/statistics */
-.project-container-box span {
-    font-family: 'MuseoModerno', cursive;
-    font-weight: 700;
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-}
-p {
-    font-family: 'Poppins', Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-color);
-    margin-bottom: 1em;
-    letter-spacing: 0.1px;
+.skill-box-bar span.fill {
+    background-color: var(--main-color); 
 }
